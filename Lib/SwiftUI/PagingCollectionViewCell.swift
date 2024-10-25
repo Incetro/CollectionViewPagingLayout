@@ -97,7 +97,7 @@ class PagingCollectionViewCell<ValueType: Identifiable, Content: View>: UICollec
 
         constraint(contentView.leadingAnchor, viewController.view.leadingAnchor, \.left, false)
         constraint(contentView.trailingAnchor, viewController.view.trailingAnchor, \.right, true)
-        constraint(contentView.topAnchor, viewController.view.topAnchor, \.top, false)
+        constraint(contentView.topAnchor, viewController.view.safeAreaLayoutGuide.topAnchor, \.top, false)
         constraint(contentView.bottomAnchor, viewController.view.safeAreaLayoutGuide.bottomAnchor, \.bottom, true)
     }
 }
